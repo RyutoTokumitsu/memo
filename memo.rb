@@ -18,9 +18,10 @@ if memo_type == 1
 elsif memo_type == 2
   puts "編集したいファイル（拡張子を除いた）を入力してください"
   file_edit = gets.chomp
-  "メモの追加内容を書いてください。【終了はcontrol + D】"
+  puts "メモの追加内容を書いてください。【終了はcontrol + D】"
   memo_content = STDIN.read
   memo = memo_content.chomp
+
 end
 
 CSV.open("#{file_name}.csv", "w" ) do |csv|
